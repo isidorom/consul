@@ -50,7 +50,11 @@ class SiteCustomization::Image < ApplicationRecord
     def check_image
       return unless image.attached?
 
-      image.analyze unless image.analyzed?
+      unless image.analyzed?
+        attachment_changes["image"].upload
+        image.analyze
+      end
+
       width = image.metadata[:width]
       height = image.metadata[:height]
 
