@@ -10,5 +10,7 @@
 </div>
 
 <p id="amount_available" class="amount-available" style="width: <%= ballot.percentage_spent(heading) %>%">
-  <%= sanitize(ballot.amount_available_info(heading)) %>
+  <% if @budget.show_money? %>
+    <%= sanitize(ballot.amount_available_info(heading)) %>
+  <% end %>
 </p>
