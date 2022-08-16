@@ -2047,51 +2047,6 @@ table {
   width: 100%;
 }
 
-.comment-header {
-
-  .comment-number {
-    @include has-fa-icon(comment, solid);
-
-    &::before {
-      margin-right: 0.3rem;
-      color: #838383;
-    }
-  }
-}
-
-.annotation-summary,
-.budget-investment-info,
-.debate-info,
-.debate-meta,
-.debate-summary,
-.investment-project-info,
-.legislation-comments,
-.proposal-info,
-.topic-info {
-
-  .comments-count {
-    @include has-fa-icon(comments, regular);
-
-    &::before {
-      margin-right: 0.3rem;
-    }
-  }
-}
-
-.legislation-comments {
-
-  .comments-count {
-
-    a {
-      text-decoration: underline;
-    }
-
-    &::before {
-      color: #999;
-    }
-  }
-}
-
 // 16. Flags
 // ---------
 
